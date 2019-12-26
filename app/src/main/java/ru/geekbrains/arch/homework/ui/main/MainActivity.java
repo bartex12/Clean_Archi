@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity implements MainPresenter.Vie
 
         presenter = createPresenter();
     }
-
+    
     @Override
     protected void onStart() {
         super.onStart();
