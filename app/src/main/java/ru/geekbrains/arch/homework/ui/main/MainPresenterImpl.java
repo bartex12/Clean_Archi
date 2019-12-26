@@ -22,11 +22,7 @@ class MainPresenterImpl implements MainPresenter {
     }
 
     @Override
-    public void onStart(int number) {
-
-        if ((number == 2) || ((((number + 2)%4) == 0))){
-            view.showNumberLaunch();
-        }
+    public void onStart() {
 
         mainInteractor.shouldShowRateProposal().subscribe(new SingleObserver<Boolean>() {
             @Override
