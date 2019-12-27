@@ -39,7 +39,7 @@ public class MainPresenterTest {
     public void shouldShowProposalOnStartIfInteractorSaysYes() {
         when(mainInteractor.shouldShowRateProposal()).thenReturn(Single.just(true));
 
-        mainPresenter.onStart();
+        mainPresenter.onStart(2);
 
         verify(view).showRateProposal();
         verifyNoMoreInteractions(view);
@@ -49,7 +49,7 @@ public class MainPresenterTest {
     public void shouldNotShowProposalOnStartIfInteractorSaysNo() {
         when(mainInteractor.shouldShowRateProposal()).thenReturn(Single.just(false));
 
-        mainPresenter.onStart();
+        mainPresenter.onStart(2);
 
         verifyNoMoreInteractions(view);
     }
@@ -58,7 +58,7 @@ public class MainPresenterTest {
     public void shouldShowNothingOnStartIfInteractorError() {
         when(mainInteractor.shouldShowRateProposal()).thenReturn(Single.<Boolean>error(new Throwable()));
 
-        mainPresenter.onStart();
+        mainPresenter.onStart(2);
 
         verifyNoMoreInteractions(view);
     }

@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity implements MainPresenter.Vie
 
         presenter = createPresenter();
     }
-    
+
     @Override
     protected void onStart() {
         super.onStart();
@@ -71,11 +71,11 @@ public class MainActivity extends AppCompatActivity implements MainPresenter.Vie
     protected void onStop() {
         super.onStop();
 
-        SharedPreferences preferences =
-                PreferenceManager.getDefaultSharedPreferences(this);
-        SharedPreferences.Editor editor = preferences.edit();
-        editor.putInt(NUMBER_OF_LAUNCH, ++number);
-        editor.apply();
+        //пишем в Preferences ++number
+        PreferenceManager.getDefaultSharedPreferences(this)
+                .edit()
+                .putInt(NUMBER_OF_LAUNCH, ++number)
+                .apply();
 
         presenter.onStop();
     }
