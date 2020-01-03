@@ -116,9 +116,10 @@ public class MainActivity extends AppCompatActivity implements MainPresenterNoRx
         HostProvider hostProvider = new FlickrHostProvider(resourceManager);
         FlickrApi flickrApi = new FlickrApi(hostProvider);
         PhotoResultMapper photoResultMapper = new PhotoResultMapper();
-        PhotoDataSource photoDataSource = new PhotoDataSourceImpl(flickrApi.getService(), apiKeyProvider, photoResultMapper);
+        PhotoDataSource photoDataSource =
+                new PhotoDataSourceImpl(flickrApi.getService(), apiKeyProvider, photoResultMapper);
         PhotosRepository photosRepository = new PhotosRepositoryImpl(photoDataSource);
-        photosRepository.getRecent(0, 100)
+        photosRepository.getRecent(0, 5)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new SingleObserver<List<Photo>>() {

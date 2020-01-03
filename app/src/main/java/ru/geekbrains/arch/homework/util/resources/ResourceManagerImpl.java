@@ -13,6 +13,7 @@ public class ResourceManagerImpl implements ResourceManager {
 
     @Override
     public String getString(@StringRes int id) {
+        //
         return context.getString(id);
     }
 
