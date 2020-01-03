@@ -62,6 +62,7 @@ public class MainActivity extends AppCompatActivity implements MainPresenter.Vie
     @Override
     protected void onStart() {
         super.onStart();
+
         presenter.onStart(number);
 
         testGettingPhotos();
@@ -142,6 +143,7 @@ public class MainActivity extends AppCompatActivity implements MainPresenter.Vie
 
     @Override
     public void showNumberLaunch() {
+        //
         textView1.setText("Launch = " + number + " Оценить.");
     }
 

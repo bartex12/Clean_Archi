@@ -4,6 +4,7 @@ public interface MainPresenter {
 
     interface View {
         void showRateProposal();
+
         //добавлено для отображения 2-6-10... запуска
         void showNumberLaunch();
     }

@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\AndroidStudioProjects\Android_4_CleanArchi\1.5\app\src\main\AndroidManifest.xml:2:1-26:12
-INJECTED from D:\AndroidStudioProjects\Android_4_CleanArchi\1.5\app\src\main\AndroidManifest.xml:2:1-26:12
-INJECTED from D:\AndroidStudioProjects\Android_4_CleanArchi\1.5\app\src\main\AndroidManifest.xml:2:1-26:12
-INJECTED from D:\AndroidStudioProjects\Android_4_CleanArchi\1.5\app\src\main\AndroidManifest.xml:2:1-26:12
+ADDED from D:\AndroidStudioProjects\Android_4_CleanArchi\1.5\app\src\main\AndroidManifest.xml:2:1-27:12
+INJECTED from D:\AndroidStudioProjects\Android_4_CleanArchi\1.5\app\src\main\AndroidManifest.xml:2:1-27:12
+INJECTED from D:\AndroidStudioProjects\Android_4_CleanArchi\1.5\app\src\main\AndroidManifest.xml:2:1-27:12
+INJECTED from D:\AndroidStudioProjects\Android_4_CleanArchi\1.5\app\src\main\AndroidManifest.xml:2:1-27:12
 MERGED from [androidx.appcompat:appcompat:1.1.0-alpha01] C:\Users\Public\.gradle\caches\transforms-1\files-1.1\appcompat-1.1.0-alpha01.aar\c03cd754b001c6700911567ec39475c6\AndroidManifest.xml:17:1-22:12
 MERGED from [io.reactivex.rxjava2:rxandroid:2.1.0] C:\Users\Public\.gradle\caches\transforms-1\files-1.1\rxandroid-2.1.0.aar\1c88166db2802ea4aefd1fd10cec426a\AndroidManifest.xml:15:1-20:12
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] C:\Users\Public\.gradle\caches\transforms-1\files-1.1\vectordrawable-animated-1.0.0.aar\d996b362d0e72e4a34043d1850d8d04c\AndroidManifest.xml:17:1-22:12
@@ -32,22 +32,22 @@ MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Public\.gradle\c
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Public\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-1.0.0.aar\fb2a4176b49f8154571725279dbf730f\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] C:\Users\Public\.gradle\caches\transforms-1\files-1.1\print-1.0.0.aar\ec800501709494a986152775f69fc256\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0-alpha01] C:\Users\Public\.gradle\caches\transforms-1\files-1.1\versionedparcelable-1.1.0-alpha01.aar\ba0ac80fe07b698379e8b96728b779af\AndroidManifest.xml:17:1-25:12
-INJECTED from D:\AndroidStudioProjects\Android_4_CleanArchi\1.5\app\src\main\AndroidManifest.xml:2:1-26:12
-INJECTED from D:\AndroidStudioProjects\Android_4_CleanArchi\1.5\app\src\main\AndroidManifest.xml:2:1-26:12
-INJECTED from D:\AndroidStudioProjects\Android_4_CleanArchi\1.5\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from D:\AndroidStudioProjects\Android_4_CleanArchi\1.5\app\src\main\AndroidManifest.xml:2:1-27:12
+INJECTED from D:\AndroidStudioProjects\Android_4_CleanArchi\1.5\app\src\main\AndroidManifest.xml:2:1-27:12
+INJECTED from D:\AndroidStudioProjects\Android_4_CleanArchi\1.5\app\src\main\AndroidManifest.xml:2:1-27:12
 	package
 		ADDED from D:\AndroidStudioProjects\Android_4_CleanArchi\1.5\app\src\main\AndroidManifest.xml:4:5-42
 		INJECTED from D:\AndroidStudioProjects\Android_4_CleanArchi\1.5\app\src\main\AndroidManifest.xml
 		INJECTED from D:\AndroidStudioProjects\Android_4_CleanArchi\1.5\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from D:\AndroidStudioProjects\Android_4_CleanArchi\1.5\app\src\main\AndroidManifest.xml
-		ADDED from D:\AndroidStudioProjects\Android_4_CleanArchi\1.5\app\src\main\AndroidManifest.xml:2:1-26:12
+		ADDED from D:\AndroidStudioProjects\Android_4_CleanArchi\1.5\app\src\main\AndroidManifest.xml:2:1-27:12
 		INJECTED from D:\AndroidStudioProjects\Android_4_CleanArchi\1.5\app\src\main\AndroidManifest.xml
 	xmlns:tools
 		ADDED from D:\AndroidStudioProjects\Android_4_CleanArchi\1.5\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from D:\AndroidStudioProjects\Android_4_CleanArchi\1.5\app\src\main\AndroidManifest.xml
-		ADDED from D:\AndroidStudioProjects\Android_4_CleanArchi\1.5\app\src\main\AndroidManifest.xml:2:1-26:12
+		ADDED from D:\AndroidStudioProjects\Android_4_CleanArchi\1.5\app\src\main\AndroidManifest.xml:2:1-27:12
 		INJECTED from D:\AndroidStudioProjects\Android_4_CleanArchi\1.5\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from D:\AndroidStudioProjects\Android_4_CleanArchi\1.5\app\src\main\AndroidManifest.xml:2:11-69
@@ -56,7 +56,7 @@ ADDED from D:\AndroidStudioProjects\Android_4_CleanArchi\1.5\app\src\main\Androi
 	android:name
 		ADDED from D:\AndroidStudioProjects\Android_4_CleanArchi\1.5\app\src\main\AndroidManifest.xml:6:22-64
 application
-ADDED from D:\AndroidStudioProjects\Android_4_CleanArchi\1.5\app\src\main\AndroidManifest.xml:8:5-24:19
+ADDED from D:\AndroidStudioProjects\Android_4_CleanArchi\1.5\app\src\main\AndroidManifest.xml:8:5-25:19
 MERGED from [androidx.core:core:1.1.0-alpha01] C:\Users\Public\.gradle\caches\transforms-1\files-1.1\core-1.1.0-alpha01.aar\e311cc2d5598469cfdf9310a9718e2fc\AndroidManifest.xml:22:5-89
 MERGED from [androidx.core:core:1.1.0-alpha01] C:\Users\Public\.gradle\caches\transforms-1\files-1.1\core-1.1.0-alpha01.aar\e311cc2d5598469cfdf9310a9718e2fc\AndroidManifest.xml:22:5-89
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0-alpha01] C:\Users\Public\.gradle\caches\transforms-1\files-1.1\versionedparcelable-1.1.0-alpha01.aar\ba0ac80fe07b698379e8b96728b779af\AndroidManifest.xml:22:5-23:19
@@ -80,19 +80,19 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0-alpha01] C:\
 	android:name
 		ADDED from D:\AndroidStudioProjects\Android_4_CleanArchi\1.5\app\src\main\AndroidManifest.xml:15:9-44
 activity#ru.geekbrains.arch.homework.ui.main.MainActivity
-ADDED from D:\AndroidStudioProjects\Android_4_CleanArchi\1.5\app\src\main\AndroidManifest.xml:17:9-23:20
+ADDED from D:\AndroidStudioProjects\Android_4_CleanArchi\1.5\app\src\main\AndroidManifest.xml:18:9-24:20
 	android:name
-		ADDED from D:\AndroidStudioProjects\Android_4_CleanArchi\1.5\app\src\main\AndroidManifest.xml:17:19-55
+		ADDED from D:\AndroidStudioProjects\Android_4_CleanArchi\1.5\app\src\main\AndroidManifest.xml:18:19-55
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from D:\AndroidStudioProjects\Android_4_CleanArchi\1.5\app\src\main\AndroidManifest.xml:18:13-22:29
+ADDED from D:\AndroidStudioProjects\Android_4_CleanArchi\1.5\app\src\main\AndroidManifest.xml:19:13-23:29
 action#android.intent.action.MAIN
-ADDED from D:\AndroidStudioProjects\Android_4_CleanArchi\1.5\app\src\main\AndroidManifest.xml:19:17-69
+ADDED from D:\AndroidStudioProjects\Android_4_CleanArchi\1.5\app\src\main\AndroidManifest.xml:20:17-69
 	android:name
-		ADDED from D:\AndroidStudioProjects\Android_4_CleanArchi\1.5\app\src\main\AndroidManifest.xml:19:25-66
+		ADDED from D:\AndroidStudioProjects\Android_4_CleanArchi\1.5\app\src\main\AndroidManifest.xml:20:25-66
 category#android.intent.category.LAUNCHER
-ADDED from D:\AndroidStudioProjects\Android_4_CleanArchi\1.5\app\src\main\AndroidManifest.xml:21:17-77
+ADDED from D:\AndroidStudioProjects\Android_4_CleanArchi\1.5\app\src\main\AndroidManifest.xml:22:17-77
 	android:name
-		ADDED from D:\AndroidStudioProjects\Android_4_CleanArchi\1.5\app\src\main\AndroidManifest.xml:21:27-74
+		ADDED from D:\AndroidStudioProjects\Android_4_CleanArchi\1.5\app\src\main\AndroidManifest.xml:22:27-74
 uses-sdk
 INJECTED from D:\AndroidStudioProjects\Android_4_CleanArchi\1.5\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\AndroidStudioProjects\Android_4_CleanArchi\1.5\app\src\main\AndroidManifest.xml
