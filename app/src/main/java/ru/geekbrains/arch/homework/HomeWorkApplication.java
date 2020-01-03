@@ -4,8 +4,6 @@ import android.app.Application;
 
 import io.reactivex.CompletableObserver;
 import io.reactivex.disposables.Disposable;
-import ru.geekbrains.arch.homework.data.launch.LaunchCountRepositoryImpl;
-import ru.geekbrains.arch.homework.data.preference.PreferenceHelper;
 import ru.geekbrains.arch.homework.interactor.appstart.AppStartInteractor;
 import ru.geekbrains.arch.homework.interactor.appstart.AppStartInteractorImpl;
 import ru.geekbrains.arch.homework.util.logger.Logger;

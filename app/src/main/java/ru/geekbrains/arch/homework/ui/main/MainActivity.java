@@ -3,7 +3,6 @@ package ru.geekbrains.arch.homework.ui.main;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.util.Log;
 import android.widget.TextView;
 
@@ -16,21 +15,21 @@ import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
 import ru.geekbrains.arch.homework.R;
-import ru.geekbrains.arch.homework.data.launch.LaunchCountRepositoryImpl;
+import ru.geekbrains.arch.homework.data.launch.LaunchCountRepositoryImplNoRx;
 import ru.geekbrains.arch.homework.data.photo.PhotoDataSource;
 import ru.geekbrains.arch.homework.data.photo.PhotoDataSourceImpl;
 import ru.geekbrains.arch.homework.data.photo.PhotosRepositoryImpl;
 import ru.geekbrains.arch.homework.data.photo.model.PhotoResultMapper;
-import ru.geekbrains.arch.homework.data.preference.PreferenceHelper;
+import ru.geekbrains.arch.homework.data.preference.PreferenceHelperNoRx;
 import ru.geekbrains.arch.homework.domain.Photo;
-import ru.geekbrains.arch.homework.interactor.main.MainInteractor;
-import ru.geekbrains.arch.homework.interactor.main.MainInteractorImpl;
+import ru.geekbrains.arch.homework.interactor.main.MainInteractorImplNoRx;
+import ru.geekbrains.arch.homework.interactor.main.MainInteractorNoRx;
 import ru.geekbrains.arch.homework.network.ApiKeyProvider;
 import ru.geekbrains.arch.homework.network.HostProvider;
 import ru.geekbrains.arch.homework.network.flickr.FlickrApi;
 import ru.geekbrains.arch.homework.network.flickr.FlickrApiKeyProvider;
 import ru.geekbrains.arch.homework.network.flickr.FlickrHostProvider;
-import ru.geekbrains.arch.homework.repository.LaunchCountRepository;
+import ru.geekbrains.arch.homework.repository.LaunchCountRepositoryNoRx;
 import ru.geekbrains.arch.homework.repository.PhotosRepository;
 import ru.geekbrains.arch.homework.util.logger.Logger;
 import ru.geekbrains.arch.homework.util.logger.LoggerImpl;
@@ -56,14 +55,15 @@ public class MainActivity extends AppCompatActivity implements MainPresenter.Vie
         number = prefSetting.getInt(NUMBER_OF_LAUNCH,1);
         Log.d(TAG, "MainActivity onCreate number = " + number);
 
-        presenter = createPresenter();
+        createPresenter();
     }
 
     @Override
     protected void onStart() {
         super.onStart();
+        Log.d(TAG, "MainActivity onStart");
 
-        presenter.onStart(number);
+        presenter.onStart();
 
         testGettingPhotos();
     }
@@ -71,13 +71,6 @@ public class MainActivity extends AppCompatActivity implements MainPresenter.Vie
     @Override
     protected void onStop() {
         super.onStop();
-
-        //пишем в Preferences ++number
-        PreferenceManager.getDefaultSharedPreferences(this)
-                .edit()
-                .putInt(NUMBER_OF_LAUNCH, ++number)
-                .apply();
-
         presenter.onStop();
     }
 
@@ -86,16 +79,21 @@ public class MainActivity extends AppCompatActivity implements MainPresenter.Vie
         createProposalDialog().show();
     }
 
-    private MainPresenter createPresenter() {
+    private void createPresenter() {
+
         // TODO: move to DI, make PreferenceHelper and LaunchCountRepository singletons
-        PreferenceHelper preferenceHelper = new PreferenceHelper(this.getApplicationContext());
-        LaunchCountRepository launchCountRepository = new LaunchCountRepositoryImpl(preferenceHelper);
-        MainInteractor mainInteractor = new MainInteractorImpl(launchCountRepository);
+        PreferenceHelperNoRx preferenceHelperNoRx =
+                new PreferenceHelperNoRx(this.getApplicationContext());
+        LaunchCountRepositoryNoRx launchCountRepositoryNoRx =
+                new LaunchCountRepositoryImplNoRx(preferenceHelperNoRx);
+        MainInteractorNoRx mainInteractorNoRx = new MainInteractorImplNoRx(launchCountRepositoryNoRx);
         Logger logger = new LoggerImpl();
-        return new MainPresenterImpl(this, mainInteractor, logger);
+        presenter = new MainPresenterImplNoRx(this, mainInteractorNoRx, logger);
+
     }
 
     private AlertDialog createProposalDialog() {
+        Log.d(TAG, "MainActivity AlertDialog");
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setMessage(R.string.rate_proposal_message)
                 .setPositiveButton(R.string.rate_proposal_yes, new DialogInterface.OnClickListener() {
@@ -145,6 +143,12 @@ public class MainActivity extends AppCompatActivity implements MainPresenter.Vie
     public void showNumberLaunch() {
         //
         textView1.setText("Launch = " + number + " Оценить.");
+    }
+
+    @Override
+    public void showNumberNo() {
+        //
+        textView1.setText("*****");
     }
 
 }
