@@ -37,12 +37,12 @@ import ru.geekbrains.arch.homework.util.resources.ResourceManagerImpl;
 
 import static android.preference.PreferenceManager.getDefaultSharedPreferences;
 
-public class MainActivity extends AppCompatActivity implements MainPresenter.View {
+public class MainActivity extends AppCompatActivity implements MainPresenterNoRx.View {
 
     private static final String TAG = "33333";
     public static final String NUMBER_OF_LAUNCH = "NUMBER_OF_LAUNCH";
     private int number =1;
-    private MainPresenter presenter;
+    private MainPresenterNoRx presenter;
     private TextView textView1;
 
     @Override

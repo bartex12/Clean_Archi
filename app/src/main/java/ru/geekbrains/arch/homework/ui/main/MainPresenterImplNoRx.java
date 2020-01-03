@@ -5,7 +5,7 @@ import android.util.Log;
 import ru.geekbrains.arch.homework.interactor.main.MainInteractorNoRx;
 import ru.geekbrains.arch.homework.util.logger.Logger;
 
-public class MainPresenterImplNoRx implements MainPresenter {
+public class MainPresenterImplNoRx implements MainPresenterNoRx {
 
     private final View view;
     private final MainInteractorNoRx mainInteractorNoRx;

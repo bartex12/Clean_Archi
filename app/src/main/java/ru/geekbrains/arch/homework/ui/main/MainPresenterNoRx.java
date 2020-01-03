@@ -5,11 +5,11 @@ public interface MainPresenterNoRx {
     interface View {
         void showRateProposal();
 
-        //добавлено для отображения 2-6-10... запуска
         void showNumberLaunch();
+        void showNumberNo();
     }
 
-    void onStart(int number); //для передачи номера запуска приложения
+    void onStart();
     void onStop();
 
     void onRatePositive();
