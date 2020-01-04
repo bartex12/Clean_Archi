@@ -11,11 +11,16 @@ import java.util.Locale;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import io.reactivex.SingleObserver;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
 import ru.geekbrains.arch.homework.R;
+import ru.geekbrains.arch.homework.data.photo.PhotoDataSourceImplNoRx;
+import ru.geekbrains.arch.homework.data.photo.PhotoDataSourceNoRx;
+import ru.geekbrains.arch.homework.data.photo.PhotosRepositoryImplNoRx;
 import ru.geekbrains.arch.homework.data.preference.LaunchCountRepositoryImplNoRx;
 import ru.geekbrains.arch.homework.data.photo.PhotoDataSource;
 import ru.geekbrains.arch.homework.data.photo.PhotoDataSourceImpl;
@@ -29,14 +34,17 @@ import ru.geekbrains.arch.homework.network.ApiKeyProvider;
 import ru.geekbrains.arch.homework.network.HostProvider;
 import ru.geekbrains.arch.homework.network.flickr.FlickrApi;
 import ru.geekbrains.arch.homework.network.flickr.FlickrApiKeyProvider;
+import ru.geekbrains.arch.homework.network.flickr.FlickrApiNoRx;
 import ru.geekbrains.arch.homework.network.flickr.FlickrHostProvider;
 import ru.geekbrains.arch.homework.repository.LaunchCountRepositoryNoRx;
 import ru.geekbrains.arch.homework.repository.PhotosRepository;
+import ru.geekbrains.arch.homework.repository.PhotosRepositoryNoRx;
 import ru.geekbrains.arch.homework.ui.main.MainPresenterImplNoRx;
 import ru.geekbrains.arch.homework.ui.main.UserPresenterNoRx;
 import ru.geekbrains.arch.homework.ui.main.UserViewNoRx;
 import ru.geekbrains.arch.homework.util.logger.Logger;
 import ru.geekbrains.arch.homework.util.logger.LoggerImpl;
+import ru.geekbrains.arch.homework.util.resources.ResourceManager;
 import ru.geekbrains.arch.homework.util.resources.ResourceManagerImpl;
 
 import static android.preference.PreferenceManager.getDefaultSharedPreferences;
@@ -48,6 +56,8 @@ public class MainActivity extends AppCompatActivity implements UserViewNoRx {
     private int number =1;
     private UserPresenterNoRx presenter;
     private TextView textView1;
+    private RecyclerView recyclerView;
+    private RecyclerViewAdapter recyclerViewAdapter; //адаптер для RecyclerView
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,6 +70,12 @@ public class MainActivity extends AppCompatActivity implements UserViewNoRx {
         Log.d(TAG, "MainActivity onCreate number = " + number);
 
         createPresenter();
+
+        initRecycler();
+    }
+
+    private void initRecycler() {
+        recyclerView = findViewById(R.id.recycledViewUrl);
     }
 
     @Override
@@ -69,7 +85,6 @@ public class MainActivity extends AppCompatActivity implements UserViewNoRx {
 
         presenter.onStart();
 
-        testGettingPhotos();
     }
 
     @Override
@@ -90,8 +105,20 @@ public class MainActivity extends AppCompatActivity implements UserViewNoRx {
                 new PreferenceHelperNoRx(this.getApplicationContext());
         LaunchCountRepositoryNoRx launchCountRepositoryNoRx =
                 new LaunchCountRepositoryImplNoRx(preferenceHelperNoRx);
-        MainInteractorNoRx mainInteractorNoRx = new MainInteractorImplNoRx(launchCountRepositoryNoRx);
         Logger logger = new LoggerImpl();
+
+        ResourceManager resourceManager = new ResourceManagerImpl(this);
+        HostProvider hostProvider = new FlickrHostProvider(resourceManager);
+        FlickrApiNoRx flickrApiNoRx = new FlickrApiNoRx(hostProvider);
+        ApiKeyProvider apiKeyProvider = new FlickrApiKeyProvider (resourceManager);
+        PhotoResultMapper photoResultMapper = new PhotoResultMapper();
+        PhotoDataSourceNoRx photoDataSourceNoRx =
+                new PhotoDataSourceImplNoRx(flickrApiNoRx,apiKeyProvider,photoResultMapper);
+        PhotosRepositoryNoRx photosRepositoryNoRx =
+                new PhotosRepositoryImplNoRx(photoDataSourceNoRx);
+        MainInteractorNoRx mainInteractorNoRx =
+                new MainInteractorImplNoRx(launchCountRepositoryNoRx, photosRepositoryNoRx);
+
         presenter = new MainPresenterImplNoRx(this, mainInteractorNoRx, logger);
 
     }
@@ -113,35 +140,6 @@ public class MainActivity extends AppCompatActivity implements UserViewNoRx {
         return builder.create();
     }
 
-    // TODO: remove it
-    private void testGettingPhotos() {
-        ResourceManagerImpl resourceManager = new ResourceManagerImpl(getApplicationContext());
-        ApiKeyProvider apiKeyProvider = new FlickrApiKeyProvider(resourceManager);
-        HostProvider hostProvider = new FlickrHostProvider(resourceManager);
-        FlickrApi flickrApi = new FlickrApi(hostProvider);
-        PhotoResultMapper photoResultMapper = new PhotoResultMapper();
-        PhotoDataSource photoDataSource =
-                new PhotoDataSourceImpl(flickrApi.getService(), apiKeyProvider, photoResultMapper);
-        PhotosRepository photosRepository = new PhotosRepositoryImpl(photoDataSource);
-        photosRepository.getRecent(0, 5)
-                .subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new SingleObserver<List<Photo>>() {
-                    @Override
-                    public void onSubscribe(Disposable d) {
-
-                    }
-                    @Override
-                    public void onSuccess(List<Photo> photos) {
-                        Log.i(TAG, "Got photos: " + photos.size() + " " + photos);
-                    }
-                    @Override
-                    public void onError(Throwable e) {
-                        Log.i(TAG, "Error getting photos", e);
-                    }
-                });
-    }
-
     @Override
     public void showNumberLaunch() {
         //textView1.setText(String.format(Locale.ENGLISH,"Запуск № %d", number));
@@ -153,6 +151,17 @@ public class MainActivity extends AppCompatActivity implements UserViewNoRx {
     public void showNumberNo() {
         //
         textView1.setText(getResources().getString(R.string.stars));
+    }
+
+    @Override
+    public void showPhotosResent(List<Photo> photos) {
+        Log.d(TAG, "MainActivity showPhotosResent photos.size() = "+ photos.size());
+        //используем встроенный LinearLayoutManager
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+        recyclerViewAdapter = new RecyclerViewAdapter(photos);
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setAdapter(recyclerViewAdapter);
+
     }
 
 }

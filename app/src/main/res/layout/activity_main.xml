@@ -1,25 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     tools:context="view.MainActivity">
 
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginStart="24dp"
+    android:layout_marginEnd="24dp"
+    android:layout_marginBottom="8dp"
+    android:orientation="vertical"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.060000002">
+
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/textView"
+        style="@style/StyleMiddle"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Clean architecture!"
-        android:layout_gravity="center"
-        />
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="@string/clean_architecture" />
 
     <TextView
         android:id="@+id/text1"
-        android:layout_width="wrap_content"
+        style="@style/StyleBig"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
+        android:gravity="center"
         android:text="@string/info"
-        android:textSize="18sp"
-        android:textColor="@color/colorPrimaryDark"
-        android:layout_gravity="bottom|center_horizontal"/>
+        />
 
-</FrameLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycledViewUrl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+

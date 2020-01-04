@@ -2,6 +2,10 @@ package ru.geekbrains.arch.homework.ui.main;
 
 import android.util.Log;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import ru.geekbrains.arch.homework.domain.Photo;
 import ru.geekbrains.arch.homework.interactor.main.MainInteractorNoRx;
 import ru.geekbrains.arch.homework.util.logger.Logger;
 
@@ -11,6 +15,8 @@ public class MainPresenterImplNoRx implements UserPresenterNoRx {
     private final MainInteractorNoRx mainInteractorNoRx;
     private Logger logger;
     private static final String TAG = "33333";
+
+    private List<Photo> photos = new ArrayList<>();
 
     public MainPresenterImplNoRx(UserViewNoRx view, MainInteractorNoRx mainInteractorNoRx, Logger logger) {
         this.view = view;
@@ -26,6 +32,13 @@ public class MainPresenterImplNoRx implements UserPresenterNoRx {
             Log.d(TAG, "MainPresenterImplNoRx onStart true - показать диалог");
             view.showRateProposal();
         }
+
+        photos = mainInteractorNoRx.getPhotos(1,10);
+        Log.d(TAG, "*******Presenter ************ photos.size() =" + photos.size());
+        view.showPhotosResent(photos);
+
+//        view.showPhotosResent(mainInteractorNoRx.getPhotos(1,10));
+//        Log.d(TAG, " ******* Presenter ************" );
     }
 
     @Override

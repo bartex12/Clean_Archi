@@ -8,5 +8,6 @@
     <string name="info">info</string>
     <string name="stars">*****</string>
     <string name="launch_">Запуск №</string>
+    <string name="clean_architecture">Clean architecture!</string>
 
 </resources>

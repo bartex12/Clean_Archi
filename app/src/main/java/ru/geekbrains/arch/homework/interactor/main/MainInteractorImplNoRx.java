@@ -2,14 +2,21 @@ package ru.geekbrains.arch.homework.interactor.main;
 
 import android.util.Log;
 
+import java.util.List;
+
+import ru.geekbrains.arch.homework.domain.Photo;
 import ru.geekbrains.arch.homework.repository.LaunchCountRepositoryNoRx;
+import ru.geekbrains.arch.homework.repository.PhotosRepositoryNoRx;
 
 public class MainInteractorImplNoRx implements MainInteractorNoRx {
     private LaunchCountRepositoryNoRx launchCountRepositoryNoRx;
+    private PhotosRepositoryNoRx photosRepositoryNoRx;
     private static final String TAG = "33333";
 
-    public MainInteractorImplNoRx(LaunchCountRepositoryNoRx launchCountRepositoryNoRx) {
+    public MainInteractorImplNoRx(LaunchCountRepositoryNoRx launchCountRepositoryNoRx,
+                                  PhotosRepositoryNoRx photosRepositoryNoRx) {
         this.launchCountRepositoryNoRx = launchCountRepositoryNoRx;
+        this.photosRepositoryNoRx = photosRepositoryNoRx;
        // Log.d(TAG, "MainInteractorImplNoRx Конструктор");
     }
 
@@ -23,8 +30,15 @@ public class MainInteractorImplNoRx implements MainInteractorNoRx {
 
     @Override
     public void setNewNumberOfLaunch() {
+        //
         launchCountRepositoryNoRx.setLaunchNumberNoRx();
     }
+
+    @Override
+    public List<Photo> getPhotos(int pageNumber, int pageSize) {
+        return photosRepositoryNoRx.getRecent(pageNumber,pageSize);
+    }
+
 
     private Boolean shouldShowRateProposal(Integer launchNumber) {
         if (launchNumber == 2) {
