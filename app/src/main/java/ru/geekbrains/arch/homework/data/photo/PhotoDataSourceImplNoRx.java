@@ -42,6 +42,8 @@ public class PhotoDataSourceImplNoRx implements PhotoDataSourceNoRx {
     public List<Photo> getRecent(final int pageNumber, final int perPage) {
         Log.i(TAG, "PhotoDataSourceImplNoRx List<ApiResult> getRecent()");
         //TODO *************синхронизация нужна другая******************
+        //возможно, нужно вместо execute - в том же потоке , сделать enqueue() - в своём потоке
+        //это описано в видеоуроке по ретрофиту Андроид2 урок 5
         //для синхронизации потоков - чтобы основной ждал пока закончится поиск фото на сервере
         final CountDownLatch startSignal = new CountDownLatch(1);
         final List<Photo> photos =  new ArrayList<>();
