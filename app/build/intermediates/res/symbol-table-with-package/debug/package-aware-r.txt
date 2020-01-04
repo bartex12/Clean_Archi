@@ -850,10 +850,12 @@ string app_name
 string flick_api_key
 string flick_host
 string info
+string launch_
 string rate_proposal_message
 string rate_proposal_no
 string rate_proposal_yes
 string search_menu_title
+string stars
 string status_bar_notification_info_overflow
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light

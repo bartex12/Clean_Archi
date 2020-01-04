@@ -13,6 +13,7 @@ public class FlickrHostProvider implements HostProvider {
 
     @Override
     public String getHostUrl() {
+        //
         return resourceManager.getString(R.string.flick_host);
     }
 }
