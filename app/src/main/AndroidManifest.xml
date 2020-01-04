@@ -15,7 +15,7 @@
         android:name=".HomeWorkApplication"
         tools:ignore="GoogleAppIndexingWarning">
 
-        <activity android:name=".ui.main.MainActivity">
+        <activity android:name="view.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -79,10 +79,10 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0-alpha01] C:\
 		ADDED from D:\AndroidStudioProjects\Android_4_CleanArchi\1.5\app\src\main\AndroidManifest.xml:14:9-40
 	android:name
 		ADDED from D:\AndroidStudioProjects\Android_4_CleanArchi\1.5\app\src\main\AndroidManifest.xml:15:9-44
-activity#ru.geekbrains.arch.homework.ui.main.MainActivity
+activity#view.MainActivity
 ADDED from D:\AndroidStudioProjects\Android_4_CleanArchi\1.5\app\src\main\AndroidManifest.xml:18:9-24:20
 	android:name
-		ADDED from D:\AndroidStudioProjects\Android_4_CleanArchi\1.5\app\src\main\AndroidManifest.xml:18:19-55
+		ADDED from D:\AndroidStudioProjects\Android_4_CleanArchi\1.5\app\src\main\AndroidManifest.xml:18:19-51
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
 ADDED from D:\AndroidStudioProjects\Android_4_CleanArchi\1.5\app\src\main\AndroidManifest.xml:19:13-23:29
 action#android.intent.action.MAIN

@@ -2,15 +2,6 @@ package ru.geekbrains.arch.homework;
 
 import android.app.Application;
 
-import io.reactivex.CompletableObserver;
-import io.reactivex.disposables.Disposable;
-import ru.geekbrains.arch.homework.data.launch.LaunchCountRepositoryImplNoRx;
-import ru.geekbrains.arch.homework.data.preference.PreferenceHelperNoRx;
-import ru.geekbrains.arch.homework.interactor.appstart.AppStartInteractor;
-import ru.geekbrains.arch.homework.interactor.appstart.AppStartInteractorImpl;
-import ru.geekbrains.arch.homework.util.logger.Logger;
-import ru.geekbrains.arch.homework.util.logger.LoggerImpl;
-
 public class HomeWorkApplication extends Application {
     private static final String TAG = "HomeWorkApplication";
 

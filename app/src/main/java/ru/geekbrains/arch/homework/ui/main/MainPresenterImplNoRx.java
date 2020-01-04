@@ -5,14 +5,14 @@ import android.util.Log;
 import ru.geekbrains.arch.homework.interactor.main.MainInteractorNoRx;
 import ru.geekbrains.arch.homework.util.logger.Logger;
 
-public class MainPresenterImplNoRx implements MainPresenterNoRx {
+public class MainPresenterImplNoRx implements UserPresenterNoRx {
 
-    private final View view;
+    private final UserViewNoRx view;
     private final MainInteractorNoRx mainInteractorNoRx;
     private Logger logger;
     private static final String TAG = "33333";
 
-    MainPresenterImplNoRx(View view, MainInteractorNoRx mainInteractorNoRx, Logger logger) {
+    public MainPresenterImplNoRx(UserViewNoRx view, MainInteractorNoRx mainInteractorNoRx, Logger logger) {
         this.view = view;
         this.mainInteractorNoRx = mainInteractorNoRx;
         this.logger = logger;

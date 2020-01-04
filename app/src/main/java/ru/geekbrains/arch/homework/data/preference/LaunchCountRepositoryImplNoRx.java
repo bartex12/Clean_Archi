@@ -1,11 +1,11 @@
-package ru.geekbrains.arch.homework.data.launch;
+package ru.geekbrains.arch.homework.data.preference;
 
 import android.util.Log;
 
 import ru.geekbrains.arch.homework.data.preference.PreferenceHelperNoRx;
 import ru.geekbrains.arch.homework.repository.LaunchCountRepositoryNoRx;
 
-import static ru.geekbrains.arch.homework.ui.main.MainActivity.NUMBER_OF_LAUNCH;
+import static view.MainActivity.NUMBER_OF_LAUNCH;
 
 public class LaunchCountRepositoryImplNoRx implements LaunchCountRepositoryNoRx {
     private static final String KEY_APP_LAUNCH_NUMBER = "app_launch_number";

@@ -1,4 +1,4 @@
-package ru.geekbrains.arch.homework.ui.main;
+package view;
 
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
@@ -7,6 +7,7 @@ import android.util.Log;
 import android.widget.TextView;
 
 import java.util.List;
+import java.util.Locale;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,7 +16,7 @@ import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
 import ru.geekbrains.arch.homework.R;
-import ru.geekbrains.arch.homework.data.launch.LaunchCountRepositoryImplNoRx;
+import ru.geekbrains.arch.homework.data.preference.LaunchCountRepositoryImplNoRx;
 import ru.geekbrains.arch.homework.data.photo.PhotoDataSource;
 import ru.geekbrains.arch.homework.data.photo.PhotoDataSourceImpl;
 import ru.geekbrains.arch.homework.data.photo.PhotosRepositoryImpl;
@@ -31,18 +32,21 @@ import ru.geekbrains.arch.homework.network.flickr.FlickrApiKeyProvider;
 import ru.geekbrains.arch.homework.network.flickr.FlickrHostProvider;
 import ru.geekbrains.arch.homework.repository.LaunchCountRepositoryNoRx;
 import ru.geekbrains.arch.homework.repository.PhotosRepository;
+import ru.geekbrains.arch.homework.ui.main.MainPresenterImplNoRx;
+import ru.geekbrains.arch.homework.ui.main.UserPresenterNoRx;
+import ru.geekbrains.arch.homework.ui.main.UserViewNoRx;
 import ru.geekbrains.arch.homework.util.logger.Logger;
 import ru.geekbrains.arch.homework.util.logger.LoggerImpl;
 import ru.geekbrains.arch.homework.util.resources.ResourceManagerImpl;
 
 import static android.preference.PreferenceManager.getDefaultSharedPreferences;
 
-public class MainActivity extends AppCompatActivity implements MainPresenterNoRx.View {
+public class MainActivity extends AppCompatActivity implements UserViewNoRx {
 
     private static final String TAG = "33333";
     public static final String NUMBER_OF_LAUNCH = "NUMBER_OF_LAUNCH";
     private int number =1;
-    private MainPresenterNoRx presenter;
+    private UserPresenterNoRx presenter;
     private TextView textView1;
 
     @Override
@@ -127,12 +131,10 @@ public class MainActivity extends AppCompatActivity implements MainPresenterNoRx
                     public void onSubscribe(Disposable d) {
 
                     }
-
                     @Override
                     public void onSuccess(List<Photo> photos) {
                         Log.i(TAG, "Got photos: " + photos.size() + " " + photos);
                     }
-
                     @Override
                     public void onError(Throwable e) {
                         Log.i(TAG, "Error getting photos", e);
@@ -142,14 +144,15 @@ public class MainActivity extends AppCompatActivity implements MainPresenterNoRx
 
     @Override
     public void showNumberLaunch() {
-        //
-        textView1.setText("Launch = " + number + " Оценить.");
+        //textView1.setText(String.format(Locale.ENGLISH,"Запуск № %d", number));
+        textView1.setText(String.format(Locale.ENGLISH,
+                "%s%d", getResources().getString(R.string.launch_), number));
     }
 
     @Override
     public void showNumberNo() {
         //
-        textView1.setText("*****");
+        textView1.setText(getResources().getString(R.string.stars));
     }
 
 }

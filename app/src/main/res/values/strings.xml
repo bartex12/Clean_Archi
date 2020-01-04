@@ -1,10 +1,12 @@
 <resources>
     <string name="app_name">1.5 Arch Homework</string>
 
-    <string name="rate_proposal_message">Would you rate our app in Google Play?</string>
-    <string name="rate_proposal_yes">Rate</string>
-    <string name="rate_proposal_no">Not now</string>
+    <string name="rate_proposal_message">Хотите оценить наше приложение в Google Play?</string>
+    <string name="rate_proposal_yes">Оценить</string>
+    <string name="rate_proposal_no">Не сейчас</string>
     <string name="flick_api_key">877aa89f1b5ec8cfcfa7b960b3909336</string>
     <string name="info">info</string>
+    <string name="stars">*****</string>
+    <string name="launch_">Запуск №</string>
 
 </resources>
