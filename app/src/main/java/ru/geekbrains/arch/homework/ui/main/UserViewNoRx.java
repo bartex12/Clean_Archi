@@ -11,5 +11,4 @@ public interface UserViewNoRx {
     void showNumberNo();
 
     void showPhotosResent(List<Photo> photos );
-    //void showPhotosSearched(List<Photo> photos );
 }

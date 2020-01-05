@@ -20,10 +20,8 @@ public class DetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
 
-        String url = Objects.requireNonNull(getIntent().getExtras()).getString(PHOTO_URL);
         imageViewDetail = findViewById(R.id.imageViewDetail);
+        String url = Objects.requireNonNull(getIntent().getExtras()).getString(PHOTO_URL);
         Picasso.get().load(url).into(imageViewDetail);
     }
-
-
 }

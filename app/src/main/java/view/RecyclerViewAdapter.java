@@ -5,13 +5,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.TextView;
-
 import com.squareup.picasso.Picasso;
-
 import java.util.ArrayList;
 import java.util.List;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import ru.geekbrains.arch.homework.R;
@@ -37,7 +33,6 @@ public void setOnPhotoClickListener(OnPhotoClickListener onPhotoClickListener){
             data = new ArrayList<>();
         }
         Log.d(TAG, "RecyclerViewAdapter - /конструктор/ data.size() = " + data.size());
-
     }
 
     @NonNull
