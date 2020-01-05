@@ -1,6 +1,7 @@
 package view;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
@@ -11,6 +12,7 @@ import java.util.Locale;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import io.reactivex.SingleObserver;
@@ -53,6 +55,7 @@ public class MainActivity extends AppCompatActivity implements UserViewNoRx {
 
     private static final String TAG = "33333";
     public static final String NUMBER_OF_LAUNCH = "NUMBER_OF_LAUNCH";
+    public static final String PHOTO_URL = "PHOTO_URL";
     private int number =1;
     private UserPresenterNoRx presenter;
     private TextView textView1;
@@ -156,9 +159,21 @@ public class MainActivity extends AppCompatActivity implements UserViewNoRx {
     @Override
     public void showPhotosResent(List<Photo> photos) {
         Log.d(TAG, "MainActivity showPhotosResent photos.size() = "+ photos.size());
-        //используем встроенный LinearLayoutManager
-        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+
+        //реализуем интерфейс адаптера, в  его методе onCityClick получим имя города и его позицию
+        RecyclerViewAdapter.OnPhotoClickListener onPhotoClickListener =
+                new RecyclerViewAdapter.OnPhotoClickListener() {
+                    @Override
+                    public void onPhotoClick(String url) {
+                        Intent intent = new Intent(MainActivity.this, DetailActivity.class);
+                        intent.putExtra(PHOTO_URL,url);
+                        startActivity(intent);
+                    }
+                };
+        //используем встроенный GridLayoutManager
+        GridLayoutManager layoutManager = new GridLayoutManager(getBaseContext(), 3);
         recyclerViewAdapter = new RecyclerViewAdapter(photos);
+        recyclerViewAdapter.setOnPhotoClickListener(onPhotoClickListener);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(recyclerViewAdapter);
 

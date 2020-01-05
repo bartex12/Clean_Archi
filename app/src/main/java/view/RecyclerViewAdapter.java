@@ -4,7 +4,10 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,9 +20,17 @@ import ru.geekbrains.arch.homework.domain.Photo;
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>{
     private static final String TAG = "33333";
     private List<Photo> data;
+    private OnPhotoClickListener onPhotoClickListener;
+
+public interface OnPhotoClickListener{
+    void onPhotoClick(String url);
+}
+
+public void setOnPhotoClickListener(OnPhotoClickListener onPhotoClickListener){
+    this.onPhotoClickListener = onPhotoClickListener;
+}
 
     RecyclerViewAdapter(List<Photo> photos){
-
         if (photos != null) {
             data = photos;
         }else{
@@ -33,14 +44,24 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_list,
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_list_imag,
                 parent, false);
         return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.textView.setText(data.get(position).getUrl());
+
+        final String url = data.get(position).getUrl();
+        //загружаем картинку в imageView по url с помощью библиотеки Picasso
+        Picasso.get().load(url).into(holder.imageView);
+        //при щелчке на картинке вызываем метод интерфейса и передаём url - у нас - в MainActivity
+        holder.imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onPhotoClickListener.onPhotoClick(url);
+            }
+        });
     }
 
     @Override
@@ -49,11 +70,11 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     }
 
     class ViewHolder extends RecyclerView.ViewHolder{
-        TextView textView;
+        ImageView imageView;
+
         ViewHolder(@NonNull View itemView) {
             super(itemView);
-
-            textView = itemView.findViewById(R.id.textViewUrl);
+            imageView = itemView.findViewById(R.id.imageView);
         }
     }
 }

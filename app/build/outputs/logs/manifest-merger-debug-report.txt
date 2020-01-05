@@ -16,6 +16,7 @@ MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\Public\.grad
 MERGED from [androidx.navigation:navigation-fragment:2.1.0] C:\Users\Public\.gradle\caches\transforms-1\files-1.1\navigation-fragment-2.1.0.aar\11cba63b254f9edab2f66daab05a4c61\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-extensions:2.1.0] C:\Users\Public\.gradle\caches\transforms-1\files-1.1\lifecycle-extensions-2.1.0.aar\af7db4b5ea422a167ca042ca2d66cb8d\AndroidManifest.xml:17:1-25:12
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Public\.gradle\caches\transforms-1\files-1.1\legacy-support-v4-1.0.0.aar\bafb0d2e4e0bbab00a981fc454155552\AndroidManifest.xml:17:1-22:12
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\Public\.gradle\caches\transforms-1\files-1.1\jetified-picasso-2.71828.aar\718bff721687bbf772effa3dcc09fa52\AndroidManifest.xml:2:1-14:12
 MERGED from [androidx.recyclerview:recyclerview:1.0.0] C:\Users\Public\.gradle\caches\transforms-1\files-1.1\recyclerview-1.0.0.aar\cae794bf17786b59ebeb56f64aac19ac\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Public\.gradle\caches\transforms-1\files-1.1\legacy-support-core-ui-1.0.0.aar\312fb26cf1c504cf4529056bee9fc3e2\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\Public\.gradle\caches\transforms-1\files-1.1\legacy-support-core-utils-1.0.0.aar\8c65ab992794068c0461ee40f4e949dd\AndroidManifest.xml:17:1-22:12
@@ -26,6 +27,7 @@ MERGED from [androidx.lifecycle:lifecycle-livedata:2.1.0] C:\Users\Public\.gradl
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.1.0] C:\Users\Public\.gradle\caches\transforms-1\files-1.1\lifecycle-livedata-core-2.1.0.aar\8eafde11dfefa0171523dfb89cbc4174\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\Public\.gradle\caches\transforms-1\files-1.1\core-runtime-2.1.0.aar\0cc0bd07f48cab3b03a4c1225699b14c\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.media:media:1.0.0] C:\Users\Public\.gradle\caches\transforms-1\files-1.1\media-1.0.0.aar\162fb4e0b31c222c2a171b13a336ee04\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.exifinterface:exifinterface:1.0.0-rc01] C:\Users\Public\.gradle\caches\transforms-1\files-1.1\exifinterface-1.0.0-rc01.aar\de0b6c29eca811b0d575335a9136d167\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Public\.gradle\caches\transforms-1\files-1.1\viewpager-1.0.0.aar\51775528aafa941841bcca8dc8d6a829\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\Public\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-1.0.0.aar\4ed3af05eb3bfc709e01533e8fcce1f1\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\Public\.gradle\caches\transforms-1\files-1.1\drawerlayout-1.0.0.aar\96522f989b1faa8a04ebc458ba6f10e5\AndroidManifest.xml:17:1-22:12
@@ -80,6 +82,8 @@ MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Public\.
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Public\.gradle\caches\transforms-1\files-1.1\constraintlayout-1.1.3.aar\043816081cd23bf4f7324b6e840c3afe\AndroidManifest.xml:9:5-20
 MERGED from [androidx.lifecycle:lifecycle-extensions:2.1.0] C:\Users\Public\.gradle\caches\transforms-1\files-1.1\lifecycle-extensions-2.1.0.aar\af7db4b5ea422a167ca042ca2d66cb8d\AndroidManifest.xml:22:5-23:19
 MERGED from [androidx.lifecycle:lifecycle-extensions:2.1.0] C:\Users\Public\.gradle\caches\transforms-1\files-1.1\lifecycle-extensions-2.1.0.aar\af7db4b5ea422a167ca042ca2d66cb8d\AndroidManifest.xml:22:5-23:19
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\Public\.gradle\caches\transforms-1\files-1.1\jetified-picasso-2.71828.aar\718bff721687bbf772effa3dcc09fa52\AndroidManifest.xml:7:5-12:19
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\Public\.gradle\caches\transforms-1\files-1.1\jetified-picasso-2.71828.aar\718bff721687bbf772effa3dcc09fa52\AndroidManifest.xml:7:5-12:19
 MERGED from [androidx.core:core:1.1.0] C:\Users\Public\.gradle\caches\transforms-1\files-1.1\core-1.1.0.aar\baf9dd1ad4ae8c02a106d0d7616a4234\AndroidManifest.xml:24:5-89
 MERGED from [androidx.core:core:1.1.0] C:\Users\Public\.gradle\caches\transforms-1\files-1.1\core-1.1.0.aar\baf9dd1ad4ae8c02a106d0d7616a4234\AndroidManifest.xml:24:5-89
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Public\.gradle\caches\transforms-1\files-1.1\versionedparcelable-1.1.0.aar\6fab33d294e7dce9346b03d4fef2f795\AndroidManifest.xml:24:5-25:19
@@ -89,21 +93,25 @@ MERGED from [androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\Public\.gradle
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.1.0] C:\Users\Public\.gradle\caches\transforms-1\files-1.1\core-1.1.0.aar\baf9dd1ad4ae8c02a106d0d7616a4234\AndroidManifest.xml:24:18-86
 	android:supportsRtl
-		ADDED from D:\AndroidStudioProjects\Android_4_CleanArchi\1.5\app\src\main\AndroidManifest.xml:13:9-35
+		ADDED from D:\AndroidStudioProjects\Android_4_CleanArchi\1.5\app\src\main\AndroidManifest.xml:14:9-35
 	android:label
-		ADDED from D:\AndroidStudioProjects\Android_4_CleanArchi\1.5\app\src\main\AndroidManifest.xml:11:9-41
+		ADDED from D:\AndroidStudioProjects\Android_4_CleanArchi\1.5\app\src\main\AndroidManifest.xml:12:9-41
 	tools:ignore
 		ADDED from D:\AndroidStudioProjects\Android_4_CleanArchi\1.5\app\src\main\AndroidManifest.xml:16:9-48
 	android:roundIcon
-		ADDED from D:\AndroidStudioProjects\Android_4_CleanArchi\1.5\app\src\main\AndroidManifest.xml:12:9-54
+		ADDED from D:\AndroidStudioProjects\Android_4_CleanArchi\1.5\app\src\main\AndroidManifest.xml:13:9-54
 	android:icon
-		ADDED from D:\AndroidStudioProjects\Android_4_CleanArchi\1.5\app\src\main\AndroidManifest.xml:10:9-43
+		ADDED from D:\AndroidStudioProjects\Android_4_CleanArchi\1.5\app\src\main\AndroidManifest.xml:11:9-43
 	android:allowBackup
-		ADDED from D:\AndroidStudioProjects\Android_4_CleanArchi\1.5\app\src\main\AndroidManifest.xml:9:9-35
+		ADDED from D:\AndroidStudioProjects\Android_4_CleanArchi\1.5\app\src\main\AndroidManifest.xml:10:9-35
 	android:theme
-		ADDED from D:\AndroidStudioProjects\Android_4_CleanArchi\1.5\app\src\main\AndroidManifest.xml:14:9-40
+		ADDED from D:\AndroidStudioProjects\Android_4_CleanArchi\1.5\app\src\main\AndroidManifest.xml:15:9-40
 	android:name
-		ADDED from D:\AndroidStudioProjects\Android_4_CleanArchi\1.5\app\src\main\AndroidManifest.xml:15:9-44
+		ADDED from D:\AndroidStudioProjects\Android_4_CleanArchi\1.5\app\src\main\AndroidManifest.xml:9:9-44
+activity#view.DetailActivity
+ADDED from D:\AndroidStudioProjects\Android_4_CleanArchi\1.5\app\src\main\AndroidManifest.xml:17:9-65
+	android:name
+		ADDED from D:\AndroidStudioProjects\Android_4_CleanArchi\1.5\app\src\main\AndroidManifest.xml:17:19-53
 activity#view.MainActivity
 ADDED from D:\AndroidStudioProjects\Android_4_CleanArchi\1.5\app\src\main\AndroidManifest.xml:18:9-24:20
 	android:name
@@ -146,6 +154,8 @@ MERGED from [androidx.lifecycle:lifecycle-extensions:2.1.0] C:\Users\Public\.gra
 MERGED from [androidx.lifecycle:lifecycle-extensions:2.1.0] C:\Users\Public\.gradle\caches\transforms-1\files-1.1\lifecycle-extensions-2.1.0.aar\af7db4b5ea422a167ca042ca2d66cb8d\AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Public\.gradle\caches\transforms-1\files-1.1\legacy-support-v4-1.0.0.aar\bafb0d2e4e0bbab00a981fc454155552\AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Public\.gradle\caches\transforms-1\files-1.1\legacy-support-v4-1.0.0.aar\bafb0d2e4e0bbab00a981fc454155552\AndroidManifest.xml:20:5-44
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\Public\.gradle\caches\transforms-1\files-1.1\jetified-picasso-2.71828.aar\718bff721687bbf772effa3dcc09fa52\AndroidManifest.xml:5:5-44
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\Public\.gradle\caches\transforms-1\files-1.1\jetified-picasso-2.71828.aar\718bff721687bbf772effa3dcc09fa52\AndroidManifest.xml:5:5-44
 MERGED from [androidx.recyclerview:recyclerview:1.0.0] C:\Users\Public\.gradle\caches\transforms-1\files-1.1\recyclerview-1.0.0.aar\cae794bf17786b59ebeb56f64aac19ac\AndroidManifest.xml:20:5-44
 MERGED from [androidx.recyclerview:recyclerview:1.0.0] C:\Users\Public\.gradle\caches\transforms-1\files-1.1\recyclerview-1.0.0.aar\cae794bf17786b59ebeb56f64aac19ac\AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Public\.gradle\caches\transforms-1\files-1.1\legacy-support-core-ui-1.0.0.aar\312fb26cf1c504cf4529056bee9fc3e2\AndroidManifest.xml:20:5-44
@@ -166,6 +176,8 @@ MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\Public\.gradle\cach
 MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\Public\.gradle\caches\transforms-1\files-1.1\core-runtime-2.1.0.aar\0cc0bd07f48cab3b03a4c1225699b14c\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.media:media:1.0.0] C:\Users\Public\.gradle\caches\transforms-1\files-1.1\media-1.0.0.aar\162fb4e0b31c222c2a171b13a336ee04\AndroidManifest.xml:20:5-44
 MERGED from [androidx.media:media:1.0.0] C:\Users\Public\.gradle\caches\transforms-1\files-1.1\media-1.0.0.aar\162fb4e0b31c222c2a171b13a336ee04\AndroidManifest.xml:20:5-44
+MERGED from [androidx.exifinterface:exifinterface:1.0.0-rc01] C:\Users\Public\.gradle\caches\transforms-1\files-1.1\exifinterface-1.0.0-rc01.aar\de0b6c29eca811b0d575335a9136d167\AndroidManifest.xml:20:5-44
+MERGED from [androidx.exifinterface:exifinterface:1.0.0-rc01] C:\Users\Public\.gradle\caches\transforms-1\files-1.1\exifinterface-1.0.0-rc01.aar\de0b6c29eca811b0d575335a9136d167\AndroidManifest.xml:20:5-44
 MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Public\.gradle\caches\transforms-1\files-1.1\viewpager-1.0.0.aar\51775528aafa941841bcca8dc8d6a829\AndroidManifest.xml:20:5-44
 MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Public\.gradle\caches\transforms-1\files-1.1\viewpager-1.0.0.aar\51775528aafa941841bcca8dc8d6a829\AndroidManifest.xml:20:5-44
 MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\Public\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-1.0.0.aar\4ed3af05eb3bfc709e01533e8fcce1f1\AndroidManifest.xml:20:5-44
@@ -222,6 +234,14 @@ INJECTED from D:\AndroidStudioProjects\Android_4_CleanArchi\1.5\app\src\main\And
 		INJECTED from D:\AndroidStudioProjects\Android_4_CleanArchi\1.5\app\src\main\AndroidManifest.xml
 		ADDED from D:\AndroidStudioProjects\Android_4_CleanArchi\1.5\app\src\main\AndroidManifest.xml
 		INJECTED from D:\AndroidStudioProjects\Android_4_CleanArchi\1.5\app\src\main\AndroidManifest.xml
+provider#com.squareup.picasso.PicassoProvider
+ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\Public\.gradle\caches\transforms-1\files-1.1\jetified-picasso-2.71828.aar\718bff721687bbf772effa3dcc09fa52\AndroidManifest.xml:8:9-11:40
+	android:authorities
+		ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\Public\.gradle\caches\transforms-1\files-1.1\jetified-picasso-2.71828.aar\718bff721687bbf772effa3dcc09fa52\AndroidManifest.xml:10:13-72
+	android:exported
+		ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\Public\.gradle\caches\transforms-1\files-1.1\jetified-picasso-2.71828.aar\718bff721687bbf772effa3dcc09fa52\AndroidManifest.xml:11:13-37
+	android:name
+		ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\Public\.gradle\caches\transforms-1\files-1.1\jetified-picasso-2.71828.aar\718bff721687bbf772effa3dcc09fa52\AndroidManifest.xml:9:13-64
 provider#androidx.lifecycle.ProcessLifecycleOwnerInitializer
 ADDED from [androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\Public\.gradle\caches\transforms-1\files-1.1\lifecycle-process-2.1.0.aar\5e53cac1b22d1a1b8233fe5826905012\AndroidManifest.xml:23:9-27:43
 	android:authorities

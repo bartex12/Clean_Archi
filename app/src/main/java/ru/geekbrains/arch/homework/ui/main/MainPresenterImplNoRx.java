@@ -33,12 +33,10 @@ public class MainPresenterImplNoRx implements UserPresenterNoRx {
             view.showRateProposal();
         }
 
-        photos = mainInteractorNoRx.getPhotos(1,10);
+        photos = mainInteractorNoRx.getPhotos(1,15);
         Log.d(TAG, "*******Presenter ************ photos.size() =" + photos.size());
         view.showPhotosResent(photos);
 
-//        view.showPhotosResent(mainInteractorNoRx.getPhotos(1,10));
-//        Log.d(TAG, " ******* Presenter ************" );
     }
 
     @Override

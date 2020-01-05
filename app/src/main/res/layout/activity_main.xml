@@ -6,42 +6,89 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="view.MainActivity">
 
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_marginStart="24dp"
-    android:layout_marginEnd="24dp"
-    android:layout_marginBottom="8dp"
-    android:orientation="vertical"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintVertical_bias="0.060000002">
-
-    <TextView
-        android:id="@+id/textView"
-        style="@style/StyleMiddle"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_marginTop="8dp"
-        android:gravity="center"
-        android:text="@string/clean_architecture" />
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.060000002">
 
-    <TextView
-        android:id="@+id/text1"
-        style="@style/StyleBig"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="@string/info"
-        />
+        android:orientation="horizontal">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycledViewUrl"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            app:counterEnabled="true"
+            app:counterMaxLength="25">
 
-</LinearLayout>
+            <EditText
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/name"
+                android:inputType="textPersonName"
+                android:theme="@style/EditTextStyle"
+                tools:ignore="Autofill" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/buttonSearch2"
+            android:backgroundTint="@color/button_tint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/search" />
+    </LinearLayout>
+
+        <TextView
+            android:id="@+id/text1"
+            style="@style/StyleBig"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/stars" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycledViewUrl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <!--        <LinearLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:orientation="horizontal">-->
+
+    <!--            <EditText-->
+    <!--                android:id="@+id/editTextSearch"-->
+    <!--                android:layout_width="0dp"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginTop="8dp"-->
+    <!--                android:layout_weight="1"-->
+    <!--                android:gravity="center"-->
+    <!--                android:text="@string/clean_architecture" />-->
+
+
+    <!--            <Button-->
+    <!--                android:id="@+id/buttonSearch"-->
+    <!--                android:backgroundTint="@color/button_tint"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:text="Поиск" />-->
+    <!--&lt;!&ndash;            style="?attr/borderlessButtonStyle"&ndash;&gt;-->
+
+    <!--        </LinearLayout>-->
