@@ -717,7 +717,7 @@ public final class R {
         public static final int decor_content_parent = 0x7f080058;
         public static final int default_activity_button = 0x7f080059;
         public static final int dialog_button = 0x7f08005f;
-        public static final int edit_query = 0x7f080063;
+        public static final int edit_query = 0x7f080064;
         public static final int expand_activities_button = 0x7f08006a;
         public static final int expanded_menu = 0x7f08006b;
         public static final int forever = 0x7f080071;
@@ -886,8 +886,8 @@ public final class R {
         public static final int abc_shareactionprovider_share_with = 0x7f0d0018;
         public static final int abc_shareactionprovider_share_with_application = 0x7f0d0019;
         public static final int abc_toolbar_collapse_description = 0x7f0d001a;
-        public static final int search_menu_title = 0x7f0d0039;
-        public static final int status_bar_notification_info_overflow = 0x7f0d003b;
+        public static final int search_menu_title = 0x7f0d003a;
+        public static final int status_bar_notification_info_overflow = 0x7f0d003c;
     }
     public static final class style {
         private style() {}

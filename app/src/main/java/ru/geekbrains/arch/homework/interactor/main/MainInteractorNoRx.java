@@ -8,4 +8,5 @@ public interface MainInteractorNoRx {
    boolean shouldShowRateProposalNoRx();
    void setNewNumberOfLaunch();
     List<Photo> getPhotos(int pageNumber, int pageSize);
+    List<Photo> getRecentSearched(int pageNumber, int perPage, String textSearch);
 }

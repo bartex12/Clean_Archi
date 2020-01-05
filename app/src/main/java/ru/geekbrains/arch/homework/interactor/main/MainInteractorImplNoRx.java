@@ -39,6 +39,11 @@ public class MainInteractorImplNoRx implements MainInteractorNoRx {
         return photosRepositoryNoRx.getRecent(pageNumber,pageSize);
     }
 
+    @Override
+    public List<Photo> getRecentSearched(int pageNumber, int perPage, String textSearch) {
+        return photosRepositoryNoRx.getRecentSearched(pageNumber,perPage, textSearch);
+    }
+
 
     private Boolean shouldShowRateProposal(Integer launchNumber) {
         if (launchNumber == 2) {

@@ -5,7 +5,12 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
+
+import com.google.android.material.snackbar.Snackbar;
 
 import java.util.List;
 import java.util.Locale;
@@ -61,6 +66,9 @@ public class MainActivity extends AppCompatActivity implements UserViewNoRx {
     private TextView textView1;
     private RecyclerView recyclerView;
     private RecyclerViewAdapter recyclerViewAdapter; //адаптер для RecyclerView
+    private EditText editTextSearch;
+    private Button buttonSearch;
+    private Bundle savedInstanceState;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,17 +76,36 @@ public class MainActivity extends AppCompatActivity implements UserViewNoRx {
         setContentView(R.layout.activity_main);
         textView1 = findViewById(R.id.text1);
 
+        this.savedInstanceState = savedInstanceState;
+
         SharedPreferences prefSetting = getDefaultSharedPreferences(this);
         number = prefSetting.getInt(NUMBER_OF_LAUNCH,1);
         Log.d(TAG, "MainActivity onCreate number = " + number);
 
         createPresenter();
 
-        initRecycler();
+        initViews();
     }
 
-    private void initRecycler() {
+    private void initViews() {
+
         recyclerView = findViewById(R.id.recycledViewUrl);
+        editTextSearch = findViewById(R.id.editTextSearch);
+        buttonSearch = findViewById(R.id.buttonSearch);
+        buttonSearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                String search = editTextSearch.getText().toString();
+                if (search.trim().isEmpty()){
+                    Snackbar.make(view, "Введите текст для поиска фото", Snackbar.LENGTH_SHORT)
+                            .show();
+                }else {
+                    Log.d(TAG, "MainActivity initViews search = " + search);
+                    presenter.onSearch(search);
+                }
+            }
+        });
     }
 
     @Override
@@ -88,6 +115,11 @@ public class MainActivity extends AppCompatActivity implements UserViewNoRx {
 
         presenter.onStart();
 
+//        if (savedInstanceState == null){
+//            presenter.onStart();
+//        }else {
+//            presenter.onSearch(editTextSearch.getText().toString());
+//        }
     }
 
     @Override
@@ -114,9 +146,9 @@ public class MainActivity extends AppCompatActivity implements UserViewNoRx {
         HostProvider hostProvider = new FlickrHostProvider(resourceManager);
         FlickrApiNoRx flickrApiNoRx = new FlickrApiNoRx(hostProvider);
         ApiKeyProvider apiKeyProvider = new FlickrApiKeyProvider (resourceManager);
-        PhotoResultMapper photoResultMapper = new PhotoResultMapper();
+        //PhotoResultMapper photoResultMapper = new PhotoResultMapper();
         PhotoDataSourceNoRx photoDataSourceNoRx =
-                new PhotoDataSourceImplNoRx(flickrApiNoRx,apiKeyProvider,photoResultMapper);
+                new PhotoDataSourceImplNoRx(flickrApiNoRx,apiKeyProvider);
         PhotosRepositoryNoRx photosRepositoryNoRx =
                 new PhotosRepositoryImplNoRx(photoDataSourceNoRx);
         MainInteractorNoRx mainInteractorNoRx =
@@ -160,7 +192,7 @@ public class MainActivity extends AppCompatActivity implements UserViewNoRx {
     public void showPhotosResent(List<Photo> photos) {
         Log.d(TAG, "MainActivity showPhotosResent photos.size() = "+ photos.size());
 
-        //реализуем интерфейс адаптера, в  его методе onCityClick получим имя города и его позицию
+        //реализуем интерфейс адаптера, в  его методе onCityClick получим url картинки
         RecyclerViewAdapter.OnPhotoClickListener onPhotoClickListener =
                 new RecyclerViewAdapter.OnPhotoClickListener() {
                     @Override
@@ -178,5 +210,4 @@ public class MainActivity extends AppCompatActivity implements UserViewNoRx {
         recyclerView.setAdapter(recyclerViewAdapter);
 
     }
-
 }

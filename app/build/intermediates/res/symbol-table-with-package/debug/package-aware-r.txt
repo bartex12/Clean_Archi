@@ -1226,7 +1226,7 @@ id beginning
 id blocking
 id bottom
 id buttonPanel
-id buttonSearch2
+id buttonSearch
 id cancel_action
 id center
 id center_horizontal
@@ -1255,12 +1255,12 @@ id dialog_button
 id dimensions
 id direct
 id disableHome
+id editTextSearch
 id edit_query
 id end
 id end_padder
 id enterAlways
 id enterAlwaysCollapsed
-id etName
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
@@ -1576,6 +1576,7 @@ string info
 string launch_
 string mtrl_chip_close_icon_content_description
 string name
+string nature
 string nav_app_bar_navigate_up_description
 string nav_app_bar_open_drawer_description
 string not_set

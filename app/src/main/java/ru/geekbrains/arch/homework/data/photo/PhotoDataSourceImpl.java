@@ -31,20 +31,21 @@ public class PhotoDataSourceImpl implements PhotoDataSource {
 
     @Override
     public Single<List<Photo>> getRecent(int pageNumber, int perPage) {
-        return service.getRecent(
-                        FLICKR_PHOTOS_GET_RECENT,
-                        apiKeyProvider.getApiKey(),
-                        JSON,
-                        NO_JSON_CALLBACK,
-                        perPage,
-                        pageNumber,
-                        URL_S)
-                .map(new Function<ApiResult, List<Photo>>() {
-                    @Override
-                    public List<Photo> apply(ApiResult apiResult) {
-                        return photoResultMapper.map(apiResult);
-                    }
-                });
+//        return service.getRecent(
+//                        FLICKR_PHOTOS_GET_RECENT,
+//                        apiKeyProvider.getApiKey(),
+//                        JSON,
+//                        NO_JSON_CALLBACK,
+//                        perPage,
+//                        pageNumber,
+//                        URL_S)
+//                .map(new Function<ApiResult, List<Photo>>() {
+//                    @Override
+//                    public List<Photo> apply(ApiResult apiResult) {
+//                        return photoResultMapper.map(apiResult);
+//                    }
+//                });
+        return null;
     }
 
 }

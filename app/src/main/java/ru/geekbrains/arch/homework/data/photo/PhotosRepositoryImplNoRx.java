@@ -16,4 +16,9 @@ public class PhotosRepositoryImplNoRx implements PhotosRepositoryNoRx {
     public List<Photo> getRecent(int pageNumber, int pageSize) {
         return photoDataSourceNoRx.getRecent(pageNumber, pageSize);
     }
+
+    @Override
+    public List<Photo> getRecentSearched(int pageNumber, int perPage, String textSearch) {
+        return photoDataSourceNoRx.getRecentSearched(pageNumber, perPage,textSearch);
+    }
 }

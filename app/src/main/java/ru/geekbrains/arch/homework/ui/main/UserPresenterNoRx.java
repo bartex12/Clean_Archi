@@ -7,4 +7,6 @@ public interface UserPresenterNoRx {
 
     void onRatePositive();
     void onRateNegative();
+
+    void onSearch(String search);
 }

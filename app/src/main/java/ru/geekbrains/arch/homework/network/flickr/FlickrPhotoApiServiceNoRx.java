@@ -17,4 +17,15 @@ public interface FlickrPhotoApiServiceNoRx {
             @Query("per_page") int perPage,
             @Query("page") int pageNumber,
             @Query("extras") String extras);
+
+    @GET("services/rest")
+    Call<ApiResult> getRecentSearchedPhotos(
+            @Query("method") String method,
+            @Query("api_key") String apiKey,
+            @Query("format") String format,
+            @Query("nojsoncallback") String noJsonCallback,
+            @Query("per_page") int perPage,
+            @Query("page") int pageNumber,
+            @Query("extras") String extras,
+            @Query("text") String text);
 }

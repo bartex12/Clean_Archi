@@ -7,4 +7,5 @@ import ru.geekbrains.arch.homework.domain.Photo;
 
 public interface PhotoDataSourceNoRx {
     List<Photo> getRecent(int pageNumber, int perPage);
+    List<Photo> getRecentSearched(int pageNumber, int perPage, String textSearch);
 }

@@ -15,6 +15,9 @@ public class MainPresenterImplNoRx implements UserPresenterNoRx {
     private final MainInteractorNoRx mainInteractorNoRx;
     private Logger logger;
     private static final String TAG = "33333";
+    public static final int PAGE_NUMBER = 1;
+    public static final int PAGE_SIZE_RESENT = 33;
+    public static final int PAGE_SIZE_SEARCHED = 100;
 
     private List<Photo> photos = new ArrayList<>();
 
@@ -22,7 +25,6 @@ public class MainPresenterImplNoRx implements UserPresenterNoRx {
         this.view = view;
         this.mainInteractorNoRx = mainInteractorNoRx;
         this.logger = logger;
-        //Log.d(TAG, "MainPresenterImplNoRx Конструктор");
     }
 
     @Override
@@ -33,30 +35,35 @@ public class MainPresenterImplNoRx implements UserPresenterNoRx {
             view.showRateProposal();
         }
 
-        photos = mainInteractorNoRx.getPhotos(1,15);
+        photos = mainInteractorNoRx.getPhotos(PAGE_NUMBER,PAGE_SIZE_RESENT);
         Log.d(TAG, "*******Presenter ************ photos.size() =" + photos.size());
         view.showPhotosResent(photos);
-
     }
 
     @Override
     public void onStop() {
+        //
         mainInteractorNoRx.setNewNumberOfLaunch();
     }
 
     @Override
     public void onRatePositive() {
-        // TODO: process user positive reaction
         //показываем  номер и Оценить
         view.showNumberLaunch();
     }
 
     @Override
     public void onRateNegative() {
-        // TODO: process user negative reaction
         //показываем звёздочки
         view.showNumberNo();
     }
 
-
+    @Override
+    public void onSearch(String searchText) {
+        // TODO: process user  Search action
+        Log.d(TAG, "MainPresenterImplNoRx onSearch searchText = " + searchText);
+        photos = mainInteractorNoRx.getRecentSearched(PAGE_NUMBER,PAGE_SIZE_SEARCHED,searchText);
+        Log.d(TAG, "******* Presenter ************ photos.size() =" + photos.size());
+        view.showPhotosResent(photos);
+    }
 }
