@@ -5710,12 +5710,14 @@ public final class R {
     public static final int rate_proposal_message=0x7f0d0035;
     public static final int rate_proposal_no=0x7f0d0036;
     public static final int rate_proposal_yes=0x7f0d0037;
-    public static final int search_menu_title=0x7f0d0038;
-    public static final int stars=0x7f0d0039;
-    public static final int status_bar_notification_info_overflow=0x7f0d003a;
-    public static final int summary_collapsed_preference_list=0x7f0d003b;
-    public static final int v7_preference_off=0x7f0d003c;
-    public static final int v7_preference_on=0x7f0d003d;
+    public static final int search=0x7f0d0038;
+    public static final int search_menu_title=0x7f0d0039;
+    public static final int stars=0x7f0d003a;
+    public static final int status_bar_notification_info_overflow=0x7f0d003b;
+    public static final int summary_collapsed_preference_list=0x7f0d003c;
+    public static final int todo=0x7f0d003d;
+    public static final int v7_preference_off=0x7f0d003e;
+    public static final int v7_preference_on=0x7f0d003f;
   }
   public static final class style {
     public static final int AlertDialog_AppCompat=0x7f0e0000;

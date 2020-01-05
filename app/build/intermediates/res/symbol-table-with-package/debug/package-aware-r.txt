@@ -1588,10 +1588,12 @@ string preference_copied
 string rate_proposal_message
 string rate_proposal_no
 string rate_proposal_yes
+string search
 string search_menu_title
 string stars
 string status_bar_notification_info_overflow
 string summary_collapsed_preference_list
+string todo
 string v7_preference_off
 string v7_preference_on
 style AlertDialog_AppCompat
