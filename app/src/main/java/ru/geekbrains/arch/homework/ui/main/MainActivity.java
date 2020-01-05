@@ -41,13 +41,20 @@ import static android.preference.PreferenceManager.getDefaultSharedPreferences;
 public class MainActivity extends AppCompatActivity implements MainPresenter.View {
 
     private static final String TAG = "33333";
+    public static final String NUMBER_OF_LAUNCH = "NUMBER_OF_LAUNCH";
+    private int number =1;
     private MainPresenter presenter;
+    private TextView textView1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        textView1 = findViewById(R.id.text1);
 
+        SharedPreferences prefSetting = getDefaultSharedPreferences(this);
+        number = prefSetting.getInt(NUMBER_OF_LAUNCH,1);
+        Log.d(TAG, "MainActivity onCreate number = " + number);
 
         presenter = createPresenter();
     }
@@ -55,7 +62,7 @@ public class MainActivity extends AppCompatActivity implements MainPresenter.Vie
     @Override
     protected void onStart() {
         super.onStart();
-        presenter.onStart();
+        presenter.onStart(number);
 
         testGettingPhotos();
     }
@@ -63,6 +70,12 @@ public class MainActivity extends AppCompatActivity implements MainPresenter.Vie
     @Override
     protected void onStop() {
         super.onStop();
+
+        SharedPreferences preferences =
+                PreferenceManager.getDefaultSharedPreferences(this);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putInt(NUMBER_OF_LAUNCH, ++number);
+        editor.apply();
 
         presenter.onStop();
     }
@@ -125,6 +138,11 @@ public class MainActivity extends AppCompatActivity implements MainPresenter.Vie
                         Log.i(TAG, "Error getting photos", e);
                     }
                 });
+    }
+
+    @Override
+    public void showNumberLaunch() {
+        textView1.setText("Launch = " + number + " Оценить.");
     }
 
 }
