@@ -4,7 +4,7 @@
  * gradle plugin from the resource data it found. It
  * should not be modified by hand.
  */
-package androidx.activity;
+package androidx.navigation.common;
 
 public final class R {
     private R() {}
@@ -13,6 +13,10 @@ public final class R {
         private attr() {}
 
         public static final int alpha = 0x7f03002c;
+        public static final int argType = 0x7f03002e;
+        public static final int destination = 0x7f0300b9;
+        public static final int enterAnim = 0x7f0300df;
+        public static final int exitAnim = 0x7f0300e4;
         public static final int font = 0x7f0300fb;
         public static final int fontProviderAuthority = 0x7f0300fd;
         public static final int fontProviderCerts = 0x7f0300fe;
@@ -23,7 +27,15 @@ public final class R {
         public static final int fontStyle = 0x7f030103;
         public static final int fontVariationSettings = 0x7f030104;
         public static final int fontWeight = 0x7f030105;
+        public static final int launchSingleTop = 0x7f03013a;
+        public static final int nullable = 0x7f03019e;
+        public static final int popEnterAnim = 0x7f0301b0;
+        public static final int popExitAnim = 0x7f0301b1;
+        public static final int popUpTo = 0x7f0301b2;
+        public static final int popUpToInclusive = 0x7f0301b3;
+        public static final int startDestination = 0x7f0301ed;
         public static final int ttcIndex = 0x7f03025e;
+        public static final int uri = 0x7f030260;
     }
     public static final class color {
         private color() {}
@@ -78,39 +90,6 @@ public final class R {
     public static final class id {
         private id() {}
 
-        public static final int accessibility_action_clickable_span = 0x7f080006;
-        public static final int accessibility_custom_action_0 = 0x7f080007;
-        public static final int accessibility_custom_action_1 = 0x7f080008;
-        public static final int accessibility_custom_action_10 = 0x7f080009;
-        public static final int accessibility_custom_action_11 = 0x7f08000a;
-        public static final int accessibility_custom_action_12 = 0x7f08000b;
-        public static final int accessibility_custom_action_13 = 0x7f08000c;
-        public static final int accessibility_custom_action_14 = 0x7f08000d;
-        public static final int accessibility_custom_action_15 = 0x7f08000e;
-        public static final int accessibility_custom_action_16 = 0x7f08000f;
-        public static final int accessibility_custom_action_17 = 0x7f080010;
-        public static final int accessibility_custom_action_18 = 0x7f080011;
-        public static final int accessibility_custom_action_19 = 0x7f080012;
-        public static final int accessibility_custom_action_2 = 0x7f080013;
-        public static final int accessibility_custom_action_20 = 0x7f080014;
-        public static final int accessibility_custom_action_21 = 0x7f080015;
-        public static final int accessibility_custom_action_22 = 0x7f080016;
-        public static final int accessibility_custom_action_23 = 0x7f080017;
-        public static final int accessibility_custom_action_24 = 0x7f080018;
-        public static final int accessibility_custom_action_25 = 0x7f080019;
-        public static final int accessibility_custom_action_26 = 0x7f08001a;
-        public static final int accessibility_custom_action_27 = 0x7f08001b;
-        public static final int accessibility_custom_action_28 = 0x7f08001c;
-        public static final int accessibility_custom_action_29 = 0x7f08001d;
-        public static final int accessibility_custom_action_3 = 0x7f08001e;
-        public static final int accessibility_custom_action_30 = 0x7f08001f;
-        public static final int accessibility_custom_action_31 = 0x7f080020;
-        public static final int accessibility_custom_action_4 = 0x7f080021;
-        public static final int accessibility_custom_action_5 = 0x7f080022;
-        public static final int accessibility_custom_action_6 = 0x7f080023;
-        public static final int accessibility_custom_action_7 = 0x7f080024;
-        public static final int accessibility_custom_action_8 = 0x7f080025;
-        public static final int accessibility_custom_action_9 = 0x7f080026;
         public static final int action_container = 0x7f08002f;
         public static final int action_divider = 0x7f080031;
         public static final int action_image = 0x7f080032;
@@ -119,7 +98,6 @@ public final class R {
         public static final int async = 0x7f08003f;
         public static final int blocking = 0x7f080043;
         public static final int chronometer = 0x7f08004e;
-        public static final int dialog_button = 0x7f08005f;
         public static final int forever = 0x7f080071;
         public static final int icon = 0x7f080078;
         public static final int icon_group = 0x7f08007a;
@@ -133,11 +111,6 @@ public final class R {
         public static final int notification_main_column_container = 0x7f080099;
         public static final int right_icon = 0x7f0800aa;
         public static final int right_side = 0x7f0800ab;
-        public static final int tag_accessibility_actions = 0x7f0800dc;
-        public static final int tag_accessibility_clickable_spans = 0x7f0800dd;
-        public static final int tag_accessibility_heading = 0x7f0800de;
-        public static final int tag_accessibility_pane_title = 0x7f0800df;
-        public static final int tag_screen_reader_focusable = 0x7f0800e0;
         public static final int tag_transition_group = 0x7f0800e1;
         public static final int tag_unhandled_key_event_manager = 0x7f0800e2;
         public static final int tag_unhandled_key_listeners = 0x7f0800e3;
@@ -154,7 +127,6 @@ public final class R {
     public static final class layout {
         private layout() {}
 
-        public static final int custom_dialog = 0x7f0b001e;
         public static final int notification_action = 0x7f0b0033;
         public static final int notification_action_tombstone = 0x7f0b0034;
         public static final int notification_template_custom_big = 0x7f0b003b;
@@ -219,5 +191,28 @@ public final class R {
         public static final int[] GradientColorItem = { 0x10101a5, 0x1010514 };
         public static final int GradientColorItem_android_color = 0;
         public static final int GradientColorItem_android_offset = 1;
+        public static final int[] NavAction = { 0x10100d0, 0x7f0300b9, 0x7f0300df, 0x7f0300e4, 0x7f03013a, 0x7f0301b0, 0x7f0301b1, 0x7f0301b2, 0x7f0301b3 };
+        public static final int NavAction_android_id = 0;
+        public static final int NavAction_destination = 1;
+        public static final int NavAction_enterAnim = 2;
+        public static final int NavAction_exitAnim = 3;
+        public static final int NavAction_launchSingleTop = 4;
+        public static final int NavAction_popEnterAnim = 5;
+        public static final int NavAction_popExitAnim = 6;
+        public static final int NavAction_popUpTo = 7;
+        public static final int NavAction_popUpToInclusive = 8;
+        public static final int[] NavArgument = { 0x1010003, 0x10101ed, 0x7f03002e, 0x7f03019e };
+        public static final int NavArgument_android_name = 0;
+        public static final int NavArgument_android_defaultValue = 1;
+        public static final int NavArgument_argType = 2;
+        public static final int NavArgument_nullable = 3;
+        public static final int[] NavDeepLink = { 0x10104ee, 0x7f030260 };
+        public static final int NavDeepLink_android_autoVerify = 0;
+        public static final int NavDeepLink_uri = 1;
+        public static final int[] NavGraphNavigator = { 0x7f0301ed };
+        public static final int NavGraphNavigator_startDestination = 0;
+        public static final int[] Navigator = { 0x1010001, 0x10100d0 };
+        public static final int Navigator_android_label = 0;
+        public static final int Navigator_android_id = 1;
     }
 }
