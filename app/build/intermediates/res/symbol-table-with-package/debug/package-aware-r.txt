@@ -1574,6 +1574,7 @@ string flick_host
 string hide_bottom_view_on_scroll_behavior
 string info
 string launch_
+string more
 string mtrl_chip_close_icon_content_description
 string name
 string nature
