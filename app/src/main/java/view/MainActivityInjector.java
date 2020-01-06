@@ -21,10 +21,10 @@ import ru.geekbrains.arch.homework.util.logger.LoggerImpl;
 import ru.geekbrains.arch.homework.util.resources.ResourceManager;
 import ru.geekbrains.arch.homework.util.resources.ResourceManagerImpl;
 
-public class MainActivityInjector {
+ class MainActivityInjector {
 
     //метод создаёт презентер со всеми зависимостями и устанавливает его в поле активити
-    public void inject(MainActivity mainActivity) {
+     void inject(MainActivity mainActivity) {
 
         // TODO: move to DI, make PreferenceHelper and LaunchCountRepository singletons
         PreferenceHelperNoRx preferenceHelperNoRx =
@@ -44,7 +44,6 @@ public class MainActivityInjector {
         MainInteractorNoRx mainInteractorNoRx =
                 new MainInteractorImplNoRx(launchCountRepositoryNoRx, photosRepositoryNoRx);
         UserPresenterNoRx presenter = new MainPresenterImplNoRx(mainActivity, mainInteractorNoRx, logger);
-
         // инъекция зависимостей через метод-сеттер
         mainActivity.setPresenter(presenter);
     }

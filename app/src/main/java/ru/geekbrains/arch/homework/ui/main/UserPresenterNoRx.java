@@ -4,9 +4,7 @@ public interface UserPresenterNoRx {
 
     void onStart();
     void onStop();
-
     void onRatePositive();
     void onRateNegative();
-
     void onSearch(String search);
 }
