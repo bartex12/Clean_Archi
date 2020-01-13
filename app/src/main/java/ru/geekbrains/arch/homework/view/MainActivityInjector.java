@@ -1,4 +1,4 @@
-package view;
+package ru.geekbrains.arch.homework.view;
 
 import ru.geekbrains.arch.homework.data.photo.PhotoDataSourceImplNoRx;
 import ru.geekbrains.arch.homework.data.photo.PhotoDataSourceNoRx;

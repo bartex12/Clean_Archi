@@ -1,4 +1,4 @@
-package view;
+package ru.geekbrains.arch.homework.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 import ru.geekbrains.arch.homework.R;

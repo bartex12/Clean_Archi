@@ -1,4 +1,4 @@
-package view;
+package ru.geekbrains.arch.homework.view;
 
 import android.content.DialogInterface;
 import android.content.Intent;
