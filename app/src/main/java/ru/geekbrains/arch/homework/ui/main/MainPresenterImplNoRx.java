@@ -15,9 +15,9 @@ public class MainPresenterImplNoRx implements UserPresenterNoRx {
     private final MainInteractorNoRx mainInteractorNoRx;
     private Logger logger;
     private static final String TAG = "33333";
-    public static final int PAGE_NUMBER = 1;
-    public static final int PAGE_SIZE_RESENT = 33;
-    public static final int PAGE_SIZE_SEARCHED = 100;
+    private static final int PAGE_NUMBER = 1;
+    private static final int PAGE_SIZE_RESENT = 33;
+    private static final int PAGE_SIZE_SEARCHED = 100;
 
     private List<Photo> photos = new ArrayList<>();
 
