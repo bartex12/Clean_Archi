@@ -70,6 +70,7 @@ public class MainActivity extends AppCompatActivity implements UserViewNoRx {
 
     //метод для определения презентера из вне MainActivity
     public void setPresenter(UserPresenterNoRx presenter){
+        //
         this.presenter = presenter;
     }
 
@@ -112,7 +113,7 @@ public class MainActivity extends AppCompatActivity implements UserViewNoRx {
 
     @Override
     public void showNumberLaunch() {
-        textView1.setText(String.format(Locale.ENGLISH,
+        textView1.setText(String.format(Locale.getDefault(),
                 "%s%d", getResources().getString(R.string.launch_), number));
     }
 

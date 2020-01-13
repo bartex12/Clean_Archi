@@ -61,9 +61,11 @@ public void setOnPhotoClickListener(OnPhotoClickListener onPhotoClickListener){
 
     @Override
     public int getItemCount() {
+    //
         return data.size();
     }
 
+    //*************  ViewHolder  ***********
     class ViewHolder extends RecyclerView.ViewHolder{
         ImageView imageView;
 
