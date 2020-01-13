@@ -29,7 +29,7 @@ public void setOnPhotoClickListener(OnPhotoClickListener onPhotoClickListener){
     RecyclerViewAdapter(List<Photo> photos){
         if (photos != null) {
             data = photos;
-        }else{
+        } else {
             data = new ArrayList<>();
         }
         Log.d(TAG, "RecyclerViewAdapter - /конструктор/ data.size() = " + data.size());

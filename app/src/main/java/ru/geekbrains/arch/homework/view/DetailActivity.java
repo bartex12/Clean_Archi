@@ -12,7 +12,7 @@ import java.util.Objects;
 
 public class DetailActivity extends AppCompatActivity {
 
-    ImageView imageViewDetail;
+    private ImageView imageViewDetail;
     public static final String PHOTO_URL = "PHOTO_URL";
 
     @Override

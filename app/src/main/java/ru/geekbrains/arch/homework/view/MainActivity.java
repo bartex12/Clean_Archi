@@ -84,8 +84,8 @@ public class MainActivity extends AppCompatActivity implements UserViewNoRx {
             public void onClick(View view) {
                 String search = editTextSearch.getText().toString();
                 if (search.trim().isEmpty()){
-                    Snackbar.make(view, "Введите текст для поиска фото", Snackbar.LENGTH_SHORT)
-                            .show();
+                    Snackbar.make(view, view.getResources().getString(R.string.input_text),
+                            Snackbar.LENGTH_SHORT).show();
                 }else {
                     Log.d(TAG, "MainActivity initViews search = " + search);
                     presenter.onSearch(search);
