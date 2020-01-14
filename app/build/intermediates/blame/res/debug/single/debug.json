@@ -444,12 +444,12 @@
         "source": "C:\\Users\\Public\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.1.0.aar\\a785ab6ff4324e7d71dd8d6f4c22dd98\\res\\drawable-hdpi-v4\\abc_switch_track_mtrl_alpha.9.png"
     },
     {
-        "merged": "D:\\AndroidStudioProjects\\Android_4_CleanArchi\\1.5\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_list_pressed_holo_light.9.png.flat",
-        "source": "C:\\Users\\Public\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.1.0.aar\\a785ab6ff4324e7d71dd8d6f4c22dd98\\res\\drawable-xhdpi-v4\\abc_list_pressed_holo_light.9.png"
-    },
-    {
         "merged": "D:\\AndroidStudioProjects\\Android_4_CleanArchi\\1.5\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-mdpi-v17_abc_spinner_mtrl_am_alpha.9.png.flat",
         "source": "C:\\Users\\Public\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.1.0.aar\\a785ab6ff4324e7d71dd8d6f4c22dd98\\res\\drawable-ldrtl-mdpi-v17\\abc_spinner_mtrl_am_alpha.9.png"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\Android_4_CleanArchi\\1.5\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_list_pressed_holo_light.9.png.flat",
+        "source": "C:\\Users\\Public\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.1.0.aar\\a785ab6ff4324e7d71dd8d6f4c22dd98\\res\\drawable-xhdpi-v4\\abc_list_pressed_holo_light.9.png"
     },
     {
         "merged": "D:\\AndroidStudioProjects\\Android_4_CleanArchi\\1.5\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_star_black_48dp.png.flat",
@@ -814,10 +814,6 @@
     {
         "merged": "D:\\AndroidStudioProjects\\Android_4_CleanArchi\\1.5\\app\\build\\intermediates\\res\\merged\\debug\\drawable_btn_radio_on_mtrl.xml.flat",
         "source": "C:\\Users\\Public\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.1.0.aar\\a785ab6ff4324e7d71dd8d6f4c22dd98\\res\\drawable\\btn_radio_on_mtrl.xml"
-    },
-    {
-        "merged": "D:\\AndroidStudioProjects\\Android_4_CleanArchi\\1.5\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_list.xml.flat",
-        "source": "D:\\AndroidStudioProjects\\Android_4_CleanArchi\\1.5\\app\\src\\main\\res\\layout\\item_list.xml"
     },
     {
         "merged": "D:\\AndroidStudioProjects\\Android_4_CleanArchi\\1.5\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_seekbar_tick_mark_material.xml.flat",

@@ -68,28 +68,3 @@
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <!--        <LinearLayout-->
-    <!--            android:layout_width="match_parent"-->
-    <!--            android:layout_height="wrap_content"-->
-    <!--            android:orientation="horizontal">-->
-
-    <!--            <EditText-->
-    <!--                android:id="@+id/editTextSearch"-->
-    <!--                android:layout_width="0dp"-->
-    <!--                android:layout_height="wrap_content"-->
-    <!--                android:layout_marginTop="8dp"-->
-    <!--                android:layout_weight="1"-->
-    <!--                android:gravity="center"-->
-    <!--                android:text="@string/clean_architecture" />-->
-
-
-    <!--            <Button-->
-    <!--                android:id="@+id/buttonSearch"-->
-    <!--                android:backgroundTint="@color/button_tint"-->
-    <!--                android:layout_width="wrap_content"-->
-    <!--                android:layout_height="wrap_content"-->
-    <!--                android:text="Поиск" />-->
-    <!--&lt;!&ndash;            style="?attr/borderlessButtonStyle"&ndash;&gt;-->
-
-    <!--        </LinearLayout>-->

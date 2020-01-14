@@ -1390,7 +1390,6 @@ id text2
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
-id textViewUrl
 id text_input_password_toggle
 id textinput_counter
 id textinput_error
@@ -1491,7 +1490,6 @@ layout design_navigation_menu_item
 layout design_text_input_password_icon
 layout expand_button
 layout image_frame
-layout item_list
 layout item_list_imag
 layout mtrl_layout_snackbar
 layout mtrl_layout_snackbar_include
@@ -1564,7 +1562,6 @@ string appbar_scrolling_view_behavior
 string bottom_sheet_behavior
 string character_counter_content_description
 string character_counter_pattern
-string clean_architecture
 string copy
 string expand_button_title
 string fab_transformation_scrim_behavior
@@ -1572,7 +1569,7 @@ string fab_transformation_sheet_behavior
 string flick_api_key
 string flick_host
 string hide_bottom_view_on_scroll_behavior
-string info
+string input_text
 string launch_
 string more
 string mtrl_chip_close_icon_content_description
@@ -1861,7 +1858,6 @@ style RtlOverlay_Widget_AppCompat_SearchView_MagIcon
 style RtlUnderlay_Widget_AppCompat_ActionButton
 style RtlUnderlay_Widget_AppCompat_ActionButton_Overflow
 style StyleBig
-style StyleMiddle
 style TextAppearance_AppCompat
 style TextAppearance_AppCompat_Body1
 style TextAppearance_AppCompat_Body2
